@@ -7,7 +7,7 @@ Live Demo
 
 Project Structure
 - `index.html` - Main HTML file for the exam portal's structure.
-- `style.css` - CSS file to style the portal.
+- `styles.css` - CSS file to style the portal.
 
 Deployment
 This project is hosted on GitHub Pages. No server-side backend is used.
