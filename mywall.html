@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title" name="page-title">MyWall - Biodata</title>
+ 
+    <!-- Link to External Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- External Style (for specific elements) -->
+    <style>
+        /* Elegant Font */
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto&display=swap');
+
+        /* Element selector */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #0e0c0c;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Id Selector */
+        #header-title {
+            color: #B58D5B;  /* Elegant gold color */
+            text-align: center;
+            font-size: 3em;
+            font-family: 'Playfair Display', serif;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            margin-top: 30px;
+        }
+
+        /* Class selector */
+        .intro-text {
+            text-align: center;
+            font-size: 1.3em;
+            color: #555;
+            margin-bottom: 30px;
+            font-weight: normal;
+        }
+
+        /* Table Styling with Element Selectors */
+        table {
+            width: 75%;
+            margin: 30px auto;
+            border-collapse: collapse;
+            background-color: #fff;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            max-width: 100%;
+        }
+
+        /* Table Header with Id Selectors */
+        #field-header, #details-header {
+            padding: 15px;
+            text-align: left;
+            font-size: 1.2em;
+            text-transform: uppercase;
+            background-color: #B58D5B;
+            color: white;
+        }
+
+        /* Table Row with Element Selectors */
+        tr:nth-child(even) {
+            background-color: #f4f4f4;
+        }
+
+        tr:hover {
+            background-color: #e2e2e2;
+        }
+
+        td {
+            padding: 12px;
+            text-align: left;
+            font-size: 1.1em;
+            color: #666;
+        }
+
+        /* Footer Styling with Id Selectors */
+        #footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #2c3e50;
+            color: white;
+            margin-top: 30px;
+        }
+
+        /* Footer Text */
+        #footer-text {
+            margin: 0;
+            font-size: 1.1em;
+        }
+
+        /* Max-Width Example for Responsive Design */
+        .responsive-table {
+            max-width: 800px;
+            width: 100%;
+            overflow-x: auto;
+        }
+
+        /* Background, Padding and Margin */
+        .table-container {
+            padding: 20px;
+            background-color: #fafafa;
+            margin-top: 20px;
+        }
+
+        /* Box Model (Applied to Table Cells) */
+        td, th {
+            border: 1px solid #ddd;
+            padding: 10px;
+        }
+
+        /* Using Pseudo-Classes for Hover Effects */
+        tr:hover {
+            background-color: #e2e2e2;
+        }
+
+        /* Z-index and Positioning */
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+            display: none;
+        }
+
+        /* Links Styling */
+        a {
+            color: #B58D5B;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            color: #2c3e50;
+            text-decoration: underline;
+        }
+
+        /* Dropdown Menu */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* Display Flex */
+        .container {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+        }
+
+        /* Float Example */
+        .float-left {
+            float: left;
+            margin-right: 10px;
+        }
+
+        .float-right {
+            float: right;
+        }
+
+        /* Inline-Block Example */
+        .inline-block {
+            display: inline-block;
+            margin: 10px;
+        }
+
+        /* Alignment with Flexbox */
+        .center-align {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Using CSS Units (rem, em, px) */
+        .spacing-example {
+            margin-top: 2rem;
+            padding: 1.5em;
+        }
+
+        /* Opacity */
+        .opaque-box {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 20px;
+        }
+
+        /* Box Shadow for Additional Design */
+        .shadow-box {
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Responsive Media Queries */
+        @media (max-width: 600px) {
+            body {
+                font-size: 14px;
+            }
+
+            table {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body id="body" name="body">
+
+    <h1 id="header-title" name="header-title">Welcome to MyWall</h1>
+
+    <div class="table-container">
+        <p class="intro-text">Here is my biodata displayed in a refined table format:</p>
+
+        <table class="responsive-table" id="biodata-table" name="biodata-table">
+            <thead>
+                <tr>
+                    <th id="field-header">Field</th>
+                    <th id="details-header">Details</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Name</td>
+                    <td>Ankita Hati</td>
+                </tr>
+                <tr>
+                    <td>Email</td>
+                    <td>2205537@kiit.ac.in</td>
+                </tr>
+                <tr>
+                    <td>Tel No.</td>
+                    <td>8910952744</td>
+                </tr>
+                <tr>
+                    <td>Roll No.</td>
+                    <td>2205537</td>
+                </tr>
+                <tr>
+                    <td>Section</td>
+                    <td>CSE-20</td>
+                </tr>
+                <tr>
+                    <td>Course</td>
+                    <td>B.Tech in Computer Science</td>
+                </tr>
+                <tr>
+                    <td>College</td>
+                    <td>KIIT UNIVERSITY</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <footer id="footer" name="footer">
+        <p id="footer-text" name="footer-text">Thank you for visiting MyWall!</p>
+    </footer>
+
+</body>
+</html>

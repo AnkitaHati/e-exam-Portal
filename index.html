@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>e-Exam Portal</title>
+    
+    <!-- Link to External Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Document-Wide Style (Internal Style) -->
+    <style>
+        /* General Body Styles */
+        body {
+            font-family: 'Georgia', serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header Styles */
+        #header {
+            background-color: #333;
+            padding: 40px;
+            text-align: center;
+            color: #fff;
+            width: 100%;
+        }
+
+        #header-title {
+            margin: 0;
+            font-size: 3em;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: #FFD700;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Image Styles */
+        #portal-image {
+            width: 100%;
+            height: auto;
+            max-height: 500px;
+            object-fit: cover;
+            border-bottom: 5px solid #FFD700;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Navigation Styles */
+        #nav-list {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .nav-item {
+            text-decoration: none;
+            font-size: 1.2em;
+            color: #333;
+            padding: 10px 20px;
+            background-color: #FFD700;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .nav-item:hover {
+            background-color: #333;
+            color: #FFD700;
+            border: 2px solid #FFD700;
+        }
+
+        /* Main Content Section */
+        #main-content {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        #intro-paragraph {
+            font-size: 1.3em;
+            color: #555;
+            margin-bottom: 30px;
+            text-align: center;
+            font-style: italic;
+        }
+
+        /* Search Bar */
+        #search-section {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        #search-bar {
+            width: 100%;
+            max-width: 400px;
+            padding: 12px;
+            border-radius: 5px;
+            border: 2px solid #FFD700;
+            font-size: 1em;
+            outline: none;
+            transition: box-shadow 0.3s ease;
+        }
+
+        #search-bar:focus {
+            box-shadow: 0 0 10px #FFD700;
+        }
+
+        /* Login/Register Dashboard */
+        #login-register-section {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        #login-register-title {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #FFD700;
+        }
+
+        #login-button, #register-button {
+            width: 150px;
+            padding: 15px 30px;
+            margin: 15px;
+            font-size: 1em;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+            border: none;
+            border-radius: 5px;
+            display: inline-block;
+            text-align: center;
+        }
+
+        #login-button {
+            background-color: #333;
+            color: #FFD700;
+        }
+
+        #login-button:hover {
+            background-color: #FFD700;
+            color: #333;
+        }
+
+        #register-button {
+            background-color: #FFD700;
+            color: #333;
+        }
+
+        #register-button:hover {
+            background-color: #333;
+            color: #FFD700;
+        }
+
+        /* Footer Section */
+        #footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        #footer-list {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        #footer-list a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 1.1em;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        #footer-list a:hover {
+            color: #FFD700;
+        }
+
+        /* Footer - Mobile Stacking */
+        @media (max-width: 768px) {
+            #footer-list {
+                flex-direction: column;
+            }
+
+            #footer-list a {
+                margin-bottom: 10px;
+            }
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            #header-title {
+                font-size: 2em;
+            }
+
+            #main-content {
+                padding: 20px;
+            }
+
+            #login-register-title {
+                font-size: 1.8em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <header id="header">
+        <h1 id="header-title" style="color: #FFD700;">e-Exam Portal</h1>
+    </header>
+
+    <!-- Main Content Section -->
+    <div id="main-content">
+        <!-- Image and Paragraph -->
+        <div id="image-section">
+            <img id="portal-image" src="eexamdesk1_banner.jpg" alt="e-Exam Portal Image">
+        </div>
+
+        <div id="intro-paragraph">
+            <p>Welcome to the e-Exam Portal! Our website offers various online services to help you with exams, discussions, resources, and more. Explore the different features and enhance your learning experience.</p>
+        </div>
+        
+        <!-- Navigation -->
+        <div id="nav-section">
+            <ul id="nav-list">
+                <li><a href="quiz_page.html" class="nav-item">e-Exam</a></li>
+                <li><a href="openforum.html" class="nav-item">Openforum</a></li>
+                <li><a href="erepository.html" class="nav-item">e-Repository</a></li>
+                <li><a href="mywall.html" class="nav-item">MyWall</a></li>
+            </ul>
+        </div>
+
+        <!-- Search Bar -->
+        <div id="search-section">
+            <input id="search-bar" type="text" placeholder="Search...">
+        </div>
+
+        <!-- Login/Register Section -->
+        <div id="login-register-section">
+            <h2 id="login-register-title">Login/Register</h2>
+            
+            <form action="loginpage.html" method="get">
+                <input id="login-button" type="submit" value="Login">
+            </form>
+            
+            <form action="registrationpage.html" method="get">
+                <input id="register-button" type="submit" value="Register">
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer id="footer">
+        <ul id="footer-list">
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+        </ul>
+    </footer>
+
+</body>
+</html>

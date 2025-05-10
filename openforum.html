@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open Forum</title>
+
+    <!-- Inline Style (for specific elements) -->
+    <style>
+        /* Elegant Font */
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;500&display=swap');
+
+        /* Header Style */
+        #header-title {
+            color: #2C3E50;  /* Deep classy blue color */
+            text-align: center;
+            font-size: 3.5em;
+            font-family: 'Playfair Display', serif;
+            letter-spacing: 1px;
+            margin-top: 50px;
+        }
+
+        #header-description {
+            text-align: center;
+            font-size: 1.5em;
+            color: #7F8C8D;  /* Gray text for description */
+            margin-bottom: 40px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* Question and Answer Heading Styles */
+        #question-heading, #answer-heading {
+            font-size: 2.5em;
+            color: #2C3E50;  /* Deep blue for headings */
+            font-family: 'Playfair Display', serif;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /* Form and Panel Styles */
+        #question-form, #answer-form {
+            margin: 0 auto;
+            width: 60%;
+            padding: 25px;
+            border: 1px solid #BDC3C7;  /* Subtle gray border */
+            border-radius: 8px;
+            background-color: #ECF0F1;  /* Light gray background */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-container {
+            width: 100%;
+            max-width: 700px;
+            margin: 20px auto;
+        }
+
+        textarea {
+            width: 90%;
+            padding: 15px;
+            font-size: 1.1em;
+            margin-bottom: 25px;
+            border-radius: 6px;
+            border: 1px solid #BDC3C7;
+            resize: vertical;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        input[type="submit"] {
+            padding: 12px 30px;
+            background-color: #3498DB;  /* Blue background for button */
+            border: none;
+            border-radius: 6px;
+            color: white;
+            font-size: 1.2em;
+            cursor: pointer;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #2980B9;  /* Darker blue on hover */
+        }
+
+        /* Hover Effects for Links and Buttons */
+        .form-container a {
+            text-decoration: none;
+            color: #3498DB;
+            transition: color 0.3s ease;
+        }
+
+        .form-container a:hover {
+            color: #2980B9;
+        }
+    </style>
+
+    <!-- Document-Wide Style (Internal CSS) -->
+    <style>
+        /* General Body Styling */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #F4F6F7; /* Soft light gray background */
+            margin: 0;
+            padding: 0;
+            color: #34495E;  /* Subtle dark gray text */
+        }
+
+        /* Divider Styling */
+        hr#divider {
+            margin-top: 40px;
+            margin-bottom: 40px;
+            border: 0;
+            border-top: 1px solid #BDC3C7; /* Subtle gray divider line */
+        }
+         /* Pseudo-elements */
+         label::before {
+            content: "🔍";
+        }
+    </style>
+
+    <!-- External CSS (Linked CSS file) -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <h1 id="header-title" name="header-title">Open Forum</h1>
+    <p id="header-description" name="header-description">Share your questions and solutions with others in a thoughtful, respectful environment!</p>
+
+    <!-- Upper Panel for Questions -->
+    <div id="question-panel" name="question-panel" class="form-container">
+        <h2 id="question-heading" name="question-heading">Post Your Question</h2>
+        <form id="question-form" name="question-form" action="submit_question.php" method="post">
+            <label id="question-label" name="question-label" for="question">Write your query here:</label><br>
+            <textarea id="question" name="question" rows="5" placeholder="Enter your question..."></textarea><br>
+            <input id="submit-question" name="submit-question" type="submit" value="Submit Question">
+        </form>
+    </div>
+
+    <hr id="divider" name="divider">
+
+    <!-- Bottom Panel for Answers/Solutions -->
+    <div id="answer-panel" name="answer-panel" class="form-container">
+        <h2 id="answer-heading" name="answer-heading">Post Your Answer</h2>
+        <form id="answer-form" name="answer-form" action="submit_answer.php" method="post">
+            <label id="answer-label" name="answer-label" for="answer">Write your answer here:</label><br>
+            <textarea id="answer" name="answer" rows="5" placeholder="Enter your answer..."></textarea><br>
+            <input id="submit-answer" name="submit-answer" type="submit" value="Submit Answer">
+        </form>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>e-Repository - Classy Theme</title>
+
+    <!-- Document-Wide Style (Internal CSS) -->
+    <style>
+        /* Element Selector - Apply styles to all paragraph elements */
+        p {
+            font-size: 1.2em;
+            line-height: 1.6;
+        }
+
+        /* ID Selector - Styling specific elements by their IDs */
+        #header-description {
+            text-align: center;
+            font-size: 1.3em;
+            color: #8B4513;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        #subject-section {
+            width: 75%;
+            margin: 40px auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            border-top: 5px solid #8B4513;
+        }
+
+        #subjects-heading {
+            text-align: center;
+            font-size: 2.5em;
+            color: #8B4513;
+            text-transform: uppercase;
+            font-family: 'Georgia', serif;
+            margin-bottom: 20px;
+        }
+
+        /* Class Selector - Styling elements by class name */
+        .subject-item {
+            background-color: #f4f4f4;
+            margin: 15px 0;
+            padding: 20px;
+            border-radius: 10px;
+            color: #333333;
+            font-size: 1.2em;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .subject-item:hover {
+            background-color: #e0e0e0;
+            transform: scale(1.03);
+        }
+
+        .subject-item a {
+            font-size: 1em;
+            color: #ffffff;
+            text-decoration: none;
+            background-color: #8B4513;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .subject-item a:hover {
+            background-color: #6f4f1f;
+        }
+
+        /* Footer section */
+        #footer-section {
+            text-align: center;
+            padding: 20px;
+            background-color: #8B4513;
+            color: white;
+            font-size: 1.2em;
+            font-weight: bold;
+            border-top: 2px solid #333333;
+        }
+    </style>
+
+    <!-- External CSS (Linked external CSS file) -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header with Inline Style -->
+    <h1 id="header-title" style="color: #8B4513; text-align: center; font-size: 3em; text-transform: uppercase; font-family: 'Georgia', serif; font-weight: bold;">e-Repository</h1>
+
+    <p id="header-description">Explore online materials for your subjects below:</p>
+
+    <!-- Subject Materials -->
+    <div id="subject-section">
+        <h2 id="subjects-heading">Available Subjects</h2>
+        <ul id="subject-list">
+            <li class="subject-item">
+                <h3>C Programming</h3>
+                <p>Introduction to C, functions, pointers, and data structures.</p>
+                <a href="https://www.learn-c.org" target="_blank">Learn C Online</a>
+            </li>
+            <li class="subject-item">
+                <h3>Java Programming</h3>
+                <p>Core Java concepts, OOP principles, and practical examples.</p>
+                <a href="https://www.javatpoint.com/java-tutorial" target="_blank">Java Tutorials</a>
+            </li>
+            <li class="subject-item">
+                <h3>Python Programming</h3>
+                <p>Learn Python basics, data handling, and scripting.</p>
+                <a href="https://www.w3schools.com/python/" target="_blank">Python Online Guide</a>
+            </li>
+            <li class="subject-item">
+                <h3>JSP (Java Server Pages)</h3>
+                <p>Learn to build dynamic web pages using JSP and servlets.</p>
+                <a href="https://www.javatpoint.com/jsp-tutorial" target="_blank">JSP Tutorials</a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer-section">
+        <p>Explore these resources to enhance your learning experience.</p>
+    </footer>
+
+</body>
+</html>

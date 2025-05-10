@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            background-color: #f4f4f9;
+            color: #2c3e50;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+            padding-top: 20px;
+        }
+
+        h2 {
+            font-size: 32px;
+            color: #177b94;
+            text-align: center;
+            margin-bottom: 40px;
+            width: 100%;
+        }
+
+        form {
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 600px;
+            font-family: 'Arial', sans-serif;
+            margin: 0 auto 40px;
+        }
+
+        table {
+            width: 100%;
+            border-spacing: 20px;
+        }
+
+        td {
+            font-size: 16px;
+            padding: 8px;
+        }
+
+        label {
+            font-weight: bold;
+            color: #34495e;
+        }
+
+        input[type="text"], input[type="password"], textarea, select {
+            width: 100%;
+            max-width: 500px;
+            padding: 12px;
+            border-radius: 6px;
+            border: 1px solid #bdc3c7;
+            font-size: 16px;
+            margin-top: 5px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"], input[type="reset"] {
+            background-color: #29b9b9;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 15px;
+        }
+
+        input[type="submit"]:hover, input[type="reset"]:hover {
+            background-color: #1abc6e;
+        }
+
+        input[type="radio"], input[type="checkbox"] {
+            margin-right: 10px;
+        }
+
+        textarea {
+            width: 100%;
+            max-width: 500px;
+            padding: 12px;
+            font-size: 16px;
+            border-radius: 6px;
+            border: 1px solid #bdc3c7;
+            box-sizing: border-box;
+        }
+
+        select {
+            padding: 12px;
+            font-size: 16px;
+            border-radius: 6px;
+            border: 1px solid #bdc3c7;
+            box-sizing: border-box;
+            max-width: 500px;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            color: #95a5a6;
+            font-size: 14px;
+        }
+
+        .custom-message {
+            font-size: 14px;
+            color: #6744ad;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .error {
+            color: red;
+            font-size: 14px;
+        }
+
+        .success {
+            color: green;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h2>Registration Form</h2>
+
+        <p class="custom-message">Fill in the form below to register for our service.</p>
+
+        <form id="registrationForm" name="registrationForm" onsubmit="return validateForm()">
+            <table>
+                <tr>
+                    <td align="right"><label for="name">Name:</label></td>
+                    <td><input type="text" id="name" name="name" placeholder="Enter your name"></td>
+                </tr>
+                <tr>
+                    <td align="right"><label for="id">ID:</label></td>
+                    <td><input type="text" id="id" name="id" placeholder="Enter your ID"></td>
+                </tr>
+                <tr>
+                    <td align="right"><label for="password">Password:</label></td>
+                    <td><input type="password" id="password" name="password" placeholder="Enter your password"></td>
+                </tr>
+                <tr>
+                    <td align="right"><label for="email">E-Mail ID:</label></td>
+                    <td><input type="text" id="email" name="email" placeholder="Enter your email"></td>
+                </tr>
+                <tr>
+                    <td align="right"><label for="phone">Phone Number:</label></td>
+                    <td><input type="text" id="phone" name="phone" placeholder="Enter your phone number (xxx-xxx-xxxx)"></td>
+                </tr>
+                <tr>
+                    <td align="right"><label for="age">Age:</label></td>
+                    <td><input type="text" id="age" name="age" placeholder="Enter your age"></td>
+                </tr>
+                <tr>
+                    <td align="right"><label>Gender:</label></td>
+                    <td>
+                        <input type="radio" id="male" name="gender" value="Male">
+                        <label for="male">Male</label>
+                        <input type="radio" id="female" name="gender" value="Female">
+                        <label for="female">Female</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right"><label for="address">College Address:</label></td>
+                    <td><textarea id="address" name="address" rows="3" placeholder="Enter your address"></textarea></td>
+                </tr>
+                <tr>
+                    <td align="right"><label for="branch">Branch:</label></td>
+                    <td>
+                        <select id="branch" name="branch">
+                            <option value="CSE">Computer Science</option>
+                            <option value="ECE">Electronics and Communication</option>
+                            <option value="EEE">Electrical Engineering</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right"><label>Technical Skills:</label></td>
+                    <td>
+                        <input type="checkbox" id="c" name="skills" value="C">
+                        <label for="c">C</label>
+                        <input type="checkbox" id="java" name="skills" value="Java">
+                        <label for="java">Java</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: center;">
+                        <input type="submit" value="Submit">
+                        <input type="reset" value="Reset">
+                    </td>
+                </tr>
+            </table>
+        </form>
+
+        <div id="result" class="footer"></div>
+
+        <div class="footer">
+            <p>&copy; 2024 Classy Registration. All rights reserved.</p>
+        </div>
+    </div>
+
+    <script>
+        function validateForm() {
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const password = document.getElementById('password').value;
+            const result = document.getElementById('result');
+
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                result.innerHTML = '<p class="error">Invalid Email</p>';
+                return false;
+            }
+
+            // Phone number validation
+            const phoneRegex = /^\d{10}$|^\d{3}-\d{3}-\d{4}$/;
+            if (!phoneRegex.test(phone)) {
+                result.innerHTML = '<p class="error">Invalid Phone Number (use 10 digits or xxx-xxx-xxxx format)</p>';
+                return false;
+            }
+
+            // Password validation
+            const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/;
+            if (!passwordRegex.test(password)) {
+                result.innerHTML = '<p class="error">Weak Password (min 8 chars with uppercase, lowercase & number)</p>';
+                return false;
+            }
+
+            result.innerHTML = '<p class="success">All fields are valid!</p>';
+            return true;
+        }
+    </script>
+</body>
+</html>

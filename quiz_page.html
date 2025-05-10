@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Quiz</title>
+
+    <!-- Inline Style -->
+    <style>
+        /* Element Selector */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #090c0f; 
+            margin: 0;
+            padding: 0;
+            color: #fff;
+        }
+
+        /* Class Selector */
+        .form-container {
+            margin: 0 auto;
+            width: 60%;
+            padding: 30px;
+            background-color: #5e7dbf; 
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        /* ID Selector */
+        #quiz-title {
+            color: #d43780;  /* Gold for title */
+            text-align: center;
+            font-size: 3.5em;
+            font-family: 'Playfair Display', serif;
+            letter-spacing: 2px;
+        }
+
+        #quiz-instructions {
+            text-align: center;
+            font-size: 1.2em;
+            color: #fff;
+            margin-bottom: 40px;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        label {
+            font-size: 1.1em;
+            font-weight: bold;
+            color: #f1f1f1;  /* Off-white color for labels */
+        }
+
+        input[type="text"], input[type="radio"] {
+            margin-bottom: 20px;
+            padding: 10px;
+            font-size: 1em;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        input[type="submit"] {
+            padding: 12px 25px;
+            background-color: #d43769;  /* Gold background */
+            border: none;
+            border-radius: 6px;
+            color: #fff;
+            font-size: 1.2em;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #C79A32;  /* Darker gold on hover */
+        }
+
+        /* Class Selector for Headings */
+        .question-title {
+            color: #290c89;  /* Gold color for headings */
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2em;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /* Element Selector for Radio Buttons */
+        input[type="radio"] {
+            margin-right: 10px;
+            accent-color: #D4AF37; /* Gold color for radio button */
+        }
+
+        hr {
+            margin-top: 40px;
+            margin-bottom: 40px;
+            border: 0;
+            border-top: 2px dashed #F1F1F1;  /* Light dashed line */
+        }
+        
+    </style>
+
+    <!-- External CSS (Linked CSS File) -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <h1 id="quiz-title">Python Quiz</h1>
+    <p id="quiz-instructions">Answer all questions. Time: 20 minutes.</p>
+
+    <!-- Form -->
+    <form id="quiz-form" action="submit_quiz.php" method="post" class="form-container">
+       
+        <!-- Roll Number -->
+        <label for="roll-number">Roll Number *</label><br>
+        <input id="roll-number" name="roll_number" type="text" placeholder="Enter your roll number" required><br><br>
+        
+        <!-- Full Name -->
+        <label for="full-name">Full Name *</label><br>
+        <input id="full-name" name="full_name" type="text" placeholder="Enter your full name" required><br><br>
+        
+        <!-- Question 1 -->
+        <label for="q1" class="question-title">1. What is the correct file extension for Python scripts? *</label><br>
+        <input id="q1-option-1" name="question_1" type="radio" value=".py" required> .py<br>
+        <input id="q1-option-2" name="question_1" type="radio" value=".pyt"> .pyt<br>
+        <input id="q1-option-3" name="question_1" type="radio" value=".pt"> .pt<br>
+        <input id="q1-option-4" name="question_1" type="radio" value=".python"> .python<br><br>
+
+        <!-- Question 2 -->
+        <label for="q2" class="question-title">2. How do you print text to the console in Python? *</label><br>
+        <input id="q2-option-1" name="question_2" type="radio" value="print()" required> print()<br>
+        <input id="q2-option-2" name="question_2" type="radio" value="echo"> echo<br>
+        <input id="q2-option-3" name="question_2" type="radio" value="write"> write<br>
+        <input id="q2-option-4" name="question_2" type="radio" value="console.print"> console.print<br><br>
+
+        <!-- Question 3 -->
+        <label for="q3" class="question-title">3. Which keyword is used to define a function in Python? *</label><br>
+        <input id="q3-option-1" name="question_3" type="radio" value="def" required> def<br>
+        <input id="q3-option-2" name="question_3" type="radio" value="function"> function<br>
+        <input id="q3-option-3" name="question_3" type="radio" value="fun"> fun<br>
+        <input id="q3-option-4" name="question_3" type="radio" value="define"> define<br><br>
+
+        <!-- Question 4 -->
+        <label for="q4" class="question-title">4. What is a list comprehension? *</label><br>
+        <input id="q4-option-1" name="question_4" type="radio" value="A way to create lists in a single line" required> A way to create lists in a single line<br>
+        <input id="q4-option-2" name="question_4" type="radio" value="A function that sorts lists"> A function that sorts lists<br>
+        <input id="q4-option-3" name="question_4" type="radio" value="A way to delete elements from a list"> A way to delete elements from a list<br>
+        <input id="q4-option-4" name="question_4" type="radio" value="A module for lists"> A module for lists<br><br>
+
+        <!-- Question 5 -->
+        <label for="q5" class="question-title">5. What is the difference between a list and a tuple in Python? *</label><br>
+        <input id="q5-option-1" name="question_5" type="radio" value="Lists are mutable, tuples are immutable" required> Lists are mutable, tuples are immutable<br>
+        <input id="q5-option-2" name="question_5" type="radio" value="Tuples are mutable, lists are immutable"> Tuples are mutable, lists are immutable<br>
+        <input id="q5-option-3" name="question_5" type="radio" value="Both are mutable"> Both are mutable<br>
+        <input id="q5-option-4" name="question_5" type="radio" value="Both are immutable"> Both are immutable<br><br>
+
+        <!-- Submit Button -->
+        <input id="submit-button" type="submit" value="Submit Quiz">
+    </form>
+
+</body>
+</html>
